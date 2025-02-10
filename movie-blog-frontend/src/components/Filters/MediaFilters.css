@@ -1,0 +1,87 @@
+.media-filters {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  position: sticky;
+  top: 100px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.filter-section select {
+  width: 100%;
+  padding: 8px;
+  background: #333;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+.genre-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.genre-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.genre-item input[type="checkbox"] {
+  accent-color: #e50914;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 10px 0;
+  accent-color: #e50914;
+}
+
+.clear-filters {
+  width: 100%;
+  padding: 10px;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clear-filters:hover {
+  background: #f40612;
+}
+
+/* Scrollbar stilleri */
+.genre-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.genre-list::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.genre-list::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 3px;
+}
+
+.genre-list::-webkit-scrollbar-thumb:hover {
+  background: #888;
+} 

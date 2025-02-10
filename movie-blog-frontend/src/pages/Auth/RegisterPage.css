@@ -1,0 +1,142 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.register-container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 60px 40px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.register-container h1 {
+  margin: 0 0 30px 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+
+.form-group input {
+  padding: 16px;
+  border-radius: 4px;
+  border: none;
+  background: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  background: #454545;
+}
+
+.register-button {
+  margin-top: 24px;
+  padding: 16px;
+  border: none;
+  border-radius: 4px;
+  background: #e50914;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.register-button:hover {
+  background: #f40612;
+}
+
+.register-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+.button-loading {
+  color: transparent !important;
+}
+
+.button-loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.error-message {
+  background: rgba(229, 9, 20, 0.1);
+  border: 1px solid #e50914;
+  color: #e50914;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.register-footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.register-footer button {
+  background: none;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+
+.register-footer button:hover {
+  color: #e50914;
+}
+
+@media (max-width: 480px) {
+  .register-container {
+    padding: 40px 20px;
+  }
+} 

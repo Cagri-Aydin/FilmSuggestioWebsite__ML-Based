@@ -1,0 +1,39 @@
+.content-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+}
+
+.content-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.content-info {
+  padding: 12px;
+}
+
+.content-info h3 {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+} 

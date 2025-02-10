@@ -1,0 +1,271 @@
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: white;
+  }
+  
+  /* Fragman Bölgesi */
+  .trailer-section {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+  }
+  
+  .trailer-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .trailer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(20, 20, 20, 0) 0%,
+      rgba(20, 20, 20, 0.8) 60%,
+      rgba(20, 20, 20, 1) 100%
+    );
+  }
+  
+  .trailer-content {
+    position: relative;
+    padding: 40px;
+    margin-top: 40vh;
+    z-index: 2;
+  }
+  
+  .trailer-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .trailer-overview {
+    font-size: 1.2rem;
+    max-width: 600px;
+    color: #ccc;
+  }
+  
+  /* Ana Sayfa İçeriği */
+  .main-page {
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  .category-section {
+    margin-bottom: 40px;
+    padding: 0 40px;
+  }
+  
+  .category-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .movie-row {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    margin: 0 -20px;
+  }
+  
+  .movie-row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .movie-card {
+    flex: 0 0 200px;
+    position: relative;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .movie-poster {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .movie-poster img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+  }
+  
+  /* Normal durumdaki başlık */
+  .movie-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 10px 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  }
+  
+  .movie-title-overlay .movie-title {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+  }
+  
+  /* Hover durumunda gösterilecek detaylar */
+  .movie-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.85);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .movie-card:hover .movie-hover-overlay {
+    opacity: 1;
+  }
+  
+  .movie-card:hover .movie-title-overlay {
+    opacity: 0;
+  }
+  
+  .movie-info {
+    color: white;
+  }
+  
+  .movie-info .movie-title {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+  
+  .movie-meta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 13px;
+    color: #ccc;
+  }
+  
+  .movie-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .category-section {
+      padding: 0 20px;
+    }
+
+    .movie-card {
+      flex: 0 0 150px;
+    }
+  }
+  
+  .loading, .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.2rem;
+  }
+  
+  .error {
+    color: #e50914;
+  }
+  
+  .trailer-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .watch-button, .trailer-button {
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .watch-button {
+    background: #e50914;
+    color: white;
+  }
+  
+  .watch-button:hover {
+    background: #f40612;
+  }
+  
+  .trailer-button {
+    background: rgba(255,255,255,0.2);
+    color: white;
+  }
+  
+  .trailer-button:hover {
+    background: rgba(255,255,255,0.3);
+  }
+  
+  .trailer-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .trailer-overview {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .trailer-title {
+      font-size: 2.5rem;
+    }
+
+    .trailer-overview {
+      font-size: 1rem;
+    }
+
+    .watch-button, .trailer-button {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  

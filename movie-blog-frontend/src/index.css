@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #141414;
+  color: white;
+  overflow-x: hidden; /* Yatay scroll'u engelle */
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; /* Yatay scroll'u engelle */
+}
+
+/* Navbar'ın altındaki içerik için padding */
+main {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Container sınıfı için */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow-x: hidden;
+}
+
+.page-container {
+  padding-top: 60px;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+}

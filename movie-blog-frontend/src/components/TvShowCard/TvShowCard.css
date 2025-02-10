@@ -1,0 +1,47 @@
+.tvshow-card {
+  display: block;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.tvshow-card:hover {
+  transform: translateY(-5px);
+}
+
+.tvshow-poster {
+  position: relative;
+  padding-top: 150%;
+}
+
+.tvshow-poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tvshow-info {
+  padding: 12px;
+}
+
+.tvshow-info h3 {
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tvshow-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+} 

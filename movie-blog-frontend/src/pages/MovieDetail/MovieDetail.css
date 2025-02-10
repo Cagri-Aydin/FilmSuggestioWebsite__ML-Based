@@ -1,0 +1,402 @@
+.movie-detail {
+  position: relative;
+  min-height: 100vh;
+  color: white;
+}
+
+.movie-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.backdrop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 20, 20, 0.8) 0%,
+    rgba(20, 20, 20, 0.9) 100%
+  );
+}
+
+.movie-content {
+  display: flex;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.movie-poster {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.movie-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.movie-overview {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #eee;
+}
+
+.movie-genres {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.genre-tag {
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.error {
+  color: #e50914;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .movie-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .movie-poster {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .movie-info h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .movie-meta {
+    justify-content: center;
+  }
+}
+
+.trailer-section {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.trailer-section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+.trailer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-blogs {
+  padding: 40px;
+  background-color: #141414;
+}
+
+.movie-blogs h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: white;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.blog-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.blog-content p {
+  color: #ccc;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #e50914;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #f40612;
+}
+
+.no-blogs {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+  padding: 40px 0;
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .trailer-container {
+    height: 300px;
+  }
+}
+
+.video-section {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-section h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 4px solid #e50914;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 45%; /* 16:9'dan biraz daha küçük */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.video-info {
+  padding: 15px 0;
+  color: #fff;
+}
+
+.video-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.video-info p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Tüm videolar grid */
+.all-videos-section {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.all-videos-section h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  border-left: 4px solid #e50914;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+}
+
+.video-item h3 {
+  padding: 15px;
+  font-size: 16px;
+  color: white;
+  margin: 0;
+}
+
+.video-item .video-container {
+  padding-bottom: 56.25%;
+  margin: 0;
+}
+
+.video-item p {
+  padding: 10px 15px 15px;
+  font-size: 13px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  .video-section {
+    padding: 20px;
+  }
+  
+  .video-container {
+    padding-bottom: 56.25%; /* Mobile'da normal oran */
+  }
+  
+  .videos-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  
+  .video-item {
+    margin: 0 10px;
+  }
+}
+
+.no-trailer-section {
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.no-trailer-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  color: #aaa;
+}
+
+.no-trailer-message i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #e50914;
+}
+
+.no-trailer-message p {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .no-trailer-section {
+    padding: 20px;
+  }
+  
+  .no-trailer-message {
+    padding: 30px;
+  }
+  
+  .no-trailer-message i {
+    font-size: 36px;
+  }
+  
+  .no-trailer-message p {
+    font-size: 16px;
+  }
+} 

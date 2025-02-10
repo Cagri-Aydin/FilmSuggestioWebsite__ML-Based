@@ -1,0 +1,79 @@
+.recommendation-page {
+    padding: 20px;
+}
+
+.category-filter {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-filter label {
+    font-size: 16px;
+    color: #fff;
+}
+
+.category-filter select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-size: 16px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.movie-card {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card.selected {
+    background-color: #ff4444;
+}
+
+.movie-card.recommendation {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.recommendations-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+}
+
+.recommendation-button {
+    padding: 10px 20px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.recommendation-button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: #ff4444;
+    margin: 10px 0;
+}

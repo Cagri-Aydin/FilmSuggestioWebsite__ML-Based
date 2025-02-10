@@ -1,0 +1,114 @@
+.create-blog-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  color: white;
+}
+
+.create-blog-page h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.blog-form {
+  background: rgba(255,255,255,0.1);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 5px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 200px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.cancel-button,
+.submit-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-button {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.cancel-button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.submit-button {
+  background: #e50914;
+  color: white;
+}
+
+.submit-button:hover {
+  background: #f40612;
+}
+
+.error-message {
+  background: rgba(229, 9, 20, 0.1);
+  border: 1px solid #e50914;
+  color: #e50914;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .create-blog-page {
+    margin: 20px auto;
+  }
+
+  .blog-form {
+    padding: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-button,
+  .submit-button {
+    width: 100%;
+  }
+} 
